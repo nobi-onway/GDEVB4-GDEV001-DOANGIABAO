@@ -4,24 +4,14 @@ public class PlayerMovementInstaller : MonoBehaviour
 {
     [SerializeField] private float _speed = 5f;
 
-    private Vector2? _currentTarget;
-
     private void Awake()
     {
-        InputSystem.Instance.OnPointerDown += SetTarget;
+        MovementSystem.Instance.SetPlayer(transform);
+        InputSystem.Instance.OnPointerDown += HandlePointerDown;
     }
 
-    private void SetTarget(Vector2 target) => _currentTarget = target;
-
-    private void HandleMovement()
+    private void HandlePointerDown(Vector2 target)
     {
-        if (!MovementSystem.MoveStraight(_currentTarget, _speed, transform)) return;
-        
-        _currentTarget = null;
-    }
-
-    private void Update()
-    {
-        HandleMovement();
+        MovementSystem.Instance.SetPlayerTarget(target, _speed);
     }
 }
