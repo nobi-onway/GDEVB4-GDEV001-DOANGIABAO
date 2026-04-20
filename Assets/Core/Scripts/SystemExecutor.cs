@@ -9,8 +9,16 @@ public class SystemExecutor : MonoBehaviour
 
     private void ExecuteAllSystems()
     {
+        ExecuteGameManager();
         ExecuteMovementSystem();
         ExecuteRescueSystem();
+    }
+
+    private void ExecuteGameManager()
+    {
+        if (GameManager.Instance == null) return;
+
+        GameManager.Instance.UpdateGameTimer();
     }
 
     private void ExecuteRescueSystem()

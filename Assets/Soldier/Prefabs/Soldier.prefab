@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2359849365621574043}
   - component: {fileID: 8800454314591330970}
   - component: {fileID: 688356184638426757}
+  - component: {fileID: 8659311664347244575}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -106,6 +107,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoldierBehaviorInstaller
   _lifeTime: 5
+--- !u!114 &8659311664347244575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4201625820121124370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f7a882a9c87f94fb151040f7b6fc44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoldierMovementInstaller
+  _speed: 5
 --- !u!1 &4546254237095271767
 GameObject:
   m_ObjectHideFlags: 0
